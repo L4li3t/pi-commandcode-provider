@@ -1,0 +1,46 @@
+{
+  "name": "pi-commandcode-provider",
+  "version": "0.1.0",
+  "description": "Command Code provider for Pi: live model catalog with caching, per-model wire protocol routing, and native /login support.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "commandcode",
+    "command-code",
+    "provider"
+  ],
+  "license": "MIT",
+  "author": "safzanpirani",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "files": [
+    "src",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "sync": "node scripts/sync-catalog.mjs",
+    "sync:vision": "node scripts/sync-catalog.mjs --probe-vision",
+    "test": "node --test \"test/*.test.ts\"",
+    "check": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
