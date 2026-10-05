@@ -1,5 +1,8 @@
 # pi-commandcode-provider
 
+[![license](https://img.shields.io/github/license/L4li3t/pi-commandcode-provider)](LICENSE)
+[![pi package](https://img.shields.io/badge/pi-package-4B5563)](https://github.com/L4li3t/pi-commandcode-provider)
+
 A [Pi](https://pi.dev) provider extension for the [Command Code Provider API](https://commandcode.ai/docs/provider-api).
 
 Command Code exposes one base URL that speaks three different wire protocols, and its `/models` endpoint
@@ -20,15 +23,16 @@ carries almost no metadata. This extension handles both problems:
 ## Install
 
 ```bash
+pi install git:github.com/L4li3t/pi-commandcode-provider
+# once published to npm:
 pi install npm:pi-commandcode-provider
-# or, before it is on npm:
-pi install git:github.com/safzanpirani/pi-commandcode-provider
 ```
 
 Try it for one run without installing:
 
 ```bash
-pi -e ./src/index.ts
+git clone https://github.com/L4li3t/pi-commandcode-provider
+pi -e ./pi-commandcode-provider/src/index.ts
 ```
 
 ## Authenticate
